@@ -23,9 +23,12 @@ body {
 #quote-box {
   border-radius: 3px;
   position: relative;
-  width: 450px;
+  width: 90vw;
   padding: 40px 50px;
-  display: table;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
   background-color: #fff;
   .quote-text {
     i {
@@ -33,18 +36,17 @@ body {
       margin-right: 0.4em;
     }
     text-align: center;
-    width: 450px;
     height: auto;
     clear: both;
     font-weight: 500;
-    font-size: 1.75em;
+    font-size: 4rem;
   }
   .quote-author {
-    width: 450px;
     height: auto;
+    width: 100%;
     clear: both;
     padding-top: 20px;
-    font-size: 1em;
+    font-size: 2rem;
     text-align: right;
   }
   .buttons {
@@ -54,19 +56,36 @@ body {
     margin-top: 30px;
     .button {
       font-family: 'Raleway', sans-serif;
-      font-size: 1rem;
+      font-size: 2rem;
       font-weight: 500;
-      height: 38px;
       border: none;
       border-radius: 3px;
       color: #fff;
       background-color: #333;
       outline: none;
-      padding: 8px 18px 6px 18px;
+      padding: 16px 20px;
       opacity: 1;
       cursor: pointer;
       &:hover {
         opacity: 0.9;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #quote-box {
+    max-width: 600px;
+    .quote-text {
+      font-size: 2rem;
+    }
+    .quote-author {
+      font-size: 1.2rem;
+    }
+    .buttons {
+      .button {
+        font-size: 1.2rem;
+        padding: 8px 12px;
       }
     }
   }
